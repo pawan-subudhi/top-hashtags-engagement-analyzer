@@ -60,6 +60,20 @@ docker-compose up --build backend
 
 The Docker container will expose the service on port 8000.
 
+### To stop Docker containers
+
+```bash
+docker-compose down
+```
+
+This command will stop and remove the containers defined in your `docker-compose.yml` file. If you want to remove volumes as well, you can add the `-v` option:
+
+```bash
+docker-compose down -v
+```
+
+This is useful when you want to clean up all the resources created by your Docker Compose setup. Remember to run these commands from the same directory where your `docker-compose.yml` file is located.
+
 ## API Documentation
 
 The API documentation is available at [http://localhost:8000/docs](http://localhost:8000/docs) using Swagger UI.
