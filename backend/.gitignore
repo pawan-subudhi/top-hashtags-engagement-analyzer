@@ -1,0 +1,43 @@
+# .gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyo
+*.pyc
+
+# Virtual Environment
+venv/
+env/
+env3/
+venv3/
+*.venv/
+*.env/
+.venv/
+.venv3/
+.vscode/
+
+# Docker
+docker-compose.override.yml
+docker-compose.yml
+
+# Other
+*.log
+*.db
+*.sqlite
+*.conf
+*.pyz
+*.pyw
+*.pyo
+*.pyc
+*.pyd
+*.db
+*.sqlite
+*.db-shm
+*.db-wal
+*.idea/
+*.DS_Store
