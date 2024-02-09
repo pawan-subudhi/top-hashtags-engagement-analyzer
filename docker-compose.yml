@@ -8,16 +8,8 @@ services:
       - '8000:8000'
     volumes:
       - ./backend:/app
-    command: # used to start the Uvicorn ASGI server with a FastAPI application.
-    [
-      'uvicorn',          # Command to run Uvicorn
-      'uvicorn_conf:app',  # Module and attribute specifying the FastAPI application
-      '--host',           # Host address to bind to
-      '0.0.0.0',          # IP address to listen on (0.0.0.0 means all available network interfaces)
-      '--port',           # Port to bind to
-      '8000',             # Port number (in this case, 8000)
-      '--reload',         # Enable automatic code reloading during development
-    ]
+    # used to start the Uvicorn ASGI server with a FastAPI application.
+    command: uvicorn uvicorn_conf:app --host 0.0.0.0 --port 8000 --reload
 
   frontend:
     build:

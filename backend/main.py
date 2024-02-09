@@ -1,9 +1,17 @@
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from backend.api.endpoints import hashtags_router
-import uvicorn
 
 app = FastAPI()
 
-# OpenAPI Documentation
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+# Include CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Include your routers
+app.include_router(hashtags_router)
