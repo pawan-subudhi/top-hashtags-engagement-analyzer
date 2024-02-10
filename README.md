@@ -28,8 +28,6 @@
   - [To start Docker containers by building images for the entire project](#to-start-docker-containers-by-building-images-for-the-entire-project)
   - [To stop Docker containers](#to-stop-docker-containers)
 
-- [License](#license)
-
 ## Backend Service
 
 This is the backend service for the Top Hashtags Engagement Analyzer, providing an API endpoint to analyze and retrieve the top hashtags within a specified date range.
