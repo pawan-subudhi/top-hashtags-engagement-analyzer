@@ -96,6 +96,10 @@ This is the frontend service for the Top Hashtags Engagement Analyzer, providing
 
 ### Getting Started
 
+The user interface (UI) is visualized as follows:
+
+![UI](images/user_interface.png)
+
 #### Prerequisites
 
 - Node.js and npm
