@@ -6,21 +6,9 @@ The Top Hashtags Engagement Analyzer is a web-based application that analyzes an
 
 ## Components
 
-+-------------------------+ +------------------------+ +--------------------------+
-| | | | | |
-| Frontend Service | <---- | Backend Service | <--- | CSV Data Storage |
-| (React App, UI) | | (FastAPI, Python) | | (CSV File) |
-| | | | | |
-+-------------------------+ +------------------------+ +--------------------------+
-| |
-| |
-V V
-+-------------------------+ +------------------------+
-| | | |
-| Web Browser | | FastAPI Server API |
-| (Client) | | |
-| | | |
-+-------------------------+ +------------------------+
+Here is the system architecture diagram:
+
+![System Architecture](docs/images/system_architecture.png)
 
 ### Backend Service
 
