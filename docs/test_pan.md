@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The purpose of this test plan is to outline the testing strategy for the [Your Project Name] project. The testing process will include various levels such as unit testing, integration testing, and system testing to ensure the reliability and functionality of the software.
+The purpose of this test plan is to outline the testing strategy for the Top Hashtags Engagement Analyzer. The testing process will include various levels such as unit testing, integration testing, and system testing to ensure the reliability and functionality of the software.
 
 ## Testing Objectives
 
