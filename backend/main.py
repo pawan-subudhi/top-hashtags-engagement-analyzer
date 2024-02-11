@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.api.endpoints import hashtags_router
+from backend.api.endpoints.hashtags_router import router as hashtags_router
 
 app = FastAPI()
 

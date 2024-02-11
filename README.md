@@ -11,6 +11,7 @@
     - [Run Locally](#run-locally)
     - [Run with Docker](#run-with-docker)
   - [API Documentation](#api-documentation)
+  - [Testing](#testing)
 
 - [Frontend Service](#frontend-service)
 
@@ -80,6 +81,14 @@ The Docker container will expose the service on port 8000.
 #### API Documentation
 
 The API documentation is available at [http://localhost:8000/docs](http://localhost:8000/docs) using Swagger UI.
+
+## Testing
+
+To run tests for the backend, you can use the following command:
+
+```bash
+pytest backend/tests/
+```
 
 ## Frontend Service
 

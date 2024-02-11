@@ -1,7 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
-from main import app
-from backend.api.endpoints import hashtags_router
+from backend.main import app
+from backend.api.endpoints.hashtags_router import router as hashtags_router, read_csv_data
 from backend.api.endpoints.hashtags_router import CSV_FILE_PATH
 
 client = TestClient(app)
@@ -17,6 +17,6 @@ def test_invalid_date_range():
     assert "validation error" in response.json()["detail"][0]["msg"]
 
 def test_csv_data_loading():
-    data = hashtags_router.read_csv_data(CSV_FILE_PATH)
+    data = read_csv_data(CSV_FILE_PATH)
     assert isinstance(data, list)
     assert len(data) > 0

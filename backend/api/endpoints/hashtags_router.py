@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import List, Tuple
 from fastapi import APIRouter, HTTPException, Query
 import csv
@@ -78,7 +79,9 @@ async def get_top_hashtags_api(start_date: str = Query(..., description="Start d
 
         # Return the result as a JSON response
         return {"top_hashtags": top_hashtags}
-
+    except ValueError as e:
+        # Raise an HTTPException with a 422 status code if an value exception occurs
+        raise HTTPException(status_code=422, detail=str(e))
     except Exception as e:
         # Raise an HTTPException with a 500 status code if an exception occurs
         raise HTTPException(status_code=500, detail=str(e))
