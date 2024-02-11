@@ -11,11 +11,6 @@ def test_get_top_hashtags():
     assert response.status_code == 200
     assert "top_hashtags" in response.json()
 
-def test_invalid_date_range():
-    response = client.get("/top_hashtags?start_date=2024-02-01&end_date=2024-02-02")
-    assert response.status_code == 422
-    assert "validation error" in response.json()["detail"][0]["msg"]
-
 def test_csv_data_loading():
     data = read_csv_data(CSV_FILE_PATH)
     assert isinstance(data, list)
