@@ -6,6 +6,22 @@ The Top Hashtags Engagement Analyzer is a web-based application that analyzes an
 
 ## Components
 
++-------------------------+ +------------------------+ +--------------------------+
+| | | | | |
+| Frontend Service | <---- | Backend Service | <--- | CSV Data Storage |
+| (React App, UI) | | (FastAPI, Python) | | (CSV File) |
+| | | | | |
++-------------------------+ +------------------------+ +--------------------------+
+| |
+| |
+V V
++-------------------------+ +------------------------+
+| | | |
+| Web Browser | | FastAPI Server API |
+| (Client) | | |
+| | | |
++-------------------------+ +------------------------+
+
 ### Backend Service
 
 The backend service is responsible for handling data processing and providing an API for fetching top hashtags. It is built using FastAPI, a modern, fast web framework for building APIs with Python.
@@ -13,11 +29,13 @@ The backend service is responsible for handling data processing and providing an
 #### Components:
 
 1. **FastAPI Application (main.py):**
+
    - Implements the main FastAPI application.
    - Includes CORS middleware for cross-origin resource sharing.
    - Includes routers for handling top hashtags endpoints.
 
 2. **Hashtags Router (hashtags_router.py):**
+
    - Defines an APIRouter instance to organize routes.
    - Reads CSV data from a file and processes it to extract top hashtags based on click counts.
    - Defines an endpoint for fetching top hashtags within a specified date range.
@@ -39,6 +57,7 @@ The frontend service provides an interactive user interface for selecting a date
 #### Components:
 
 1. **React Application (App.js):**
+
    - Implements the main React application.
    - Allows users to input a date range and submit requests to the backend.
    - Displays the results in an intuitive and user-friendly interface.
@@ -51,6 +70,7 @@ The frontend service provides an interactive user interface for selecting a date
 The system is containerized using Docker for easy deployment. The Docker Compose configuration defines services for both the backend and frontend.
 
 - **Backend Service Container (backend):**
+
   - Uses uvicorn as the ASGI server to run the FastAPI application.
   - Exposes the service on port 8000.
 
@@ -61,10 +81,12 @@ The system is containerized using Docker for easy deployment. The Docker Compose
 ## Development Environment
 
 - **Programming Languages:**
+
   - Python for the backend (FastAPI).
   - JavaScript/React for the frontend.
 
 - **Version Control:**
+
   - Git for source code version control.
 
 - **Dependencies:**
