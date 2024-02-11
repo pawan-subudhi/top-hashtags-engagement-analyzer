@@ -8,7 +8,7 @@ The Top Hashtags Engagement Analyzer is a web-based application that analyzes an
 
 Here is the system architecture diagram:
 
-![System Architecture](docs/images/system_architecture.png)
+![System Architecture](images/system_architecture.png)
 
 ### Backend Service
 
